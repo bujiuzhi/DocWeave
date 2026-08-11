@@ -990,7 +990,7 @@ onBeforeUnmount(() => {
 <template>
   <main class="app-shell">
     <aside class="sidebar">
-      <div class="brand"><span class="brand-mark">⌁</span><span>DocWeave</span></div>
+      <div class="brand"><img class="brand-mark" src="/logo-mark.svg" alt=""><span>DocWeave</span></div>
       <nav aria-label="主导航">
         <button
           v-for="item in navigationItems"

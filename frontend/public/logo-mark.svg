@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title description">
+  <title id="title">DocWeave 标志</title>
+  <desc id="description">两层文档通过蓝紫色编织带连接</desc>
+  <defs>
+    <linearGradient id="weave" x1="48" y1="170" x2="208" y2="210" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0878dc"/>
+      <stop offset="0.52" stop-color="#6d4aff"/>
+      <stop offset="1" stop-color="#9a4dff"/>
+    </linearGradient>
+  </defs>
+  <path d="M128 24 218 75 128 126 38 75 128 24Z" fill="#f8fbff" stroke="#71839b" stroke-width="10" stroke-linejoin="round"/>
+  <path d="M38 75v24l90 51 90-51V75l-90 51L38 75Z" fill="#e8f2ff" stroke="#71839b" stroke-width="10" stroke-linejoin="round"/>
+  <path d="m128 119 90 51-90 52-90-52 90-51Z" fill="#fff" stroke="url(#weave)" stroke-width="10" stroke-linejoin="round"/>
+  <path d="M38 170v22l90 52 90-52v-22l-90 52-90-52Z" fill="url(#weave)" stroke="url(#weave)" stroke-width="10" stroke-linejoin="round"/>
+  <path d="m91 148 74 43" stroke="#22b8f0" stroke-width="9" stroke-linecap="round"/>
+  <path d="m165 148-74 43" stroke="#7657ff" stroke-width="9" stroke-linecap="round"/>
+</svg>

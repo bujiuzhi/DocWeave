@@ -8,7 +8,7 @@ input:disabled { cursor: not-allowed; }
 .app-shell { display: flex; min-height: 100vh; background: #f7f9fc; }
 .sidebar { position: sticky; top: 0; width: 224px; height: 100vh; padding: 30px 14px 22px; background: #061c3c; color: #eef6ff; display: flex; flex-direction: column; flex-shrink: 0; }
 .brand { display: flex; align-items: center; gap: 10px; padding: 0 12px 36px; font-size: 25px; font-weight: 700; letter-spacing: -1px; }
-.brand-mark { display: grid; place-items: center; width: 32px; height: 32px; border-radius: 8px; background: #13a8e8; color: #061c3c; font-size: 30px; line-height: 1; }
+.brand-mark { display: block; width: 38px; height: 38px; flex: 0 0 auto; }
 .sidebar nav { display: grid; gap: 8px; }
 .navigation-item { display: flex; gap: 14px; align-items: center; width: 100%; padding: 15px 16px; border: 0; border-radius: 7px; background: transparent; color: #e9f2ff; text-align: left; font-weight: 500; font-size: 16px; }
 .navigation-item:hover, .navigation-item.active { background: #164a91; color: #fff; }.navigation-item:focus-visible { outline: 2px solid #8fc4ff; outline-offset: 2px; }.navigation-item span { width: 17px; color: #a9cbff; }

@@ -1,7 +1,5 @@
 <div align="center">
-  <img src="frontend/src/assets/hero.png" width="176" alt="DocWeave 分层文档标志">
-
-# DocWeave
+  <h1><img src="frontend/public/logo-lockup.svg" width="430" alt="DocWeave"></h1>
 
 ### 面向专业 PDF 的版式保真本地化工作台
 
@@ -283,9 +281,9 @@ DocWeave 采用 [GNU Affero General Public License v3.0](LICENSE)（`AGPL-3.0-on
 
 <a href="https://www.star-history.com/?repos=bujiuzhi%2FDocWeave&type=date&legend=top-left">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=bujiuzhi/DocWeave&type=date&theme=dark&legend=top-left&sealed_token=M70o3bfsmZIrvRwfquIF1uRm371psf8lACw0BhnHAgSnWhdBsV3iQ4nwftMinVWk6K5W_ircynVwC5ndfW1SDhH0TxVvGmAtrK4bzXd-nbjpgJ_RLVKaTDRdjaSGWP-GXk4uhkbbe_4xY5qsBCJ-PWxvO8jotDN4KZNLG_pPrxM39Tg1HhgrULMDMcbd">
-    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=bujiuzhi/DocWeave&type=date&legend=top-left&sealed_token=M70o3bfsmZIrvRwfquIF1uRm371psf8lACw0BhnHAgSnWhdBsV3iQ4nwftMinVWk6K5W_ircynVwC5ndfW1SDhH0TxVvGmAtrK4bzXd-nbjpgJ_RLVKaTDRdjaSGWP-GXk4uhkbbe_4xY5qsBCJ-PWxvO8jotDN4KZNLG_pPrxM39Tg1HhgrULMDMcbd">
-    <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=bujiuzhi/DocWeave&type=date&legend=top-left&sealed_token=M70o3bfsmZIrvRwfquIF1uRm371psf8lACw0BhnHAgSnWhdBsV3iQ4nwftMinVWk6K5W_ircynVwC5ndfW1SDhH0TxVvGmAtrK4bzXd-nbjpgJ_RLVKaTDRdjaSGWP-GXk4uhkbbe_4xY5qsBCJ-PWxvO8jotDN4KZNLG_pPrxM39Tg1HhgrULMDMcbd">
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=bujiuzhi/docweave&type=date&theme=dark&legend=top-left&sealed_token=M70o3bfsmZIrvRwfquIF1uRm371psf8lACw0BhnHAgSnWhdBsV3iQ4nwftMinVWk6K5W_ircynVwC5ndfW1SDhH0TxVvGmAtrK4bzXd-nbjpgJ_RLVKaTDRdjaSGWP-GXk4uhkbbe_4xY5qsBCJ-PWxvO8jotDN4KZNLG_pPrxM39Tg1HhgrULMDMcbd&amp;v=2">
+    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=bujiuzhi/docweave&type=date&legend=top-left&sealed_token=M70o3bfsmZIrvRwfquIF1uRm371psf8lACw0BhnHAgSnWhdBsV3iQ4nwftMinVWk6K5W_ircynVwC5ndfW1SDhH0TxVvGmAtrK4bzXd-nbjpgJ_RLVKaTDRdjaSGWP-GXk4uhkbbe_4xY5qsBCJ-PWxvO8jotDN4KZNLG_pPrxM39Tg1HhgrULMDMcbd&amp;v=2">
+    <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=bujiuzhi/docweave&type=date&legend=top-left&sealed_token=M70o3bfsmZIrvRwfquIF1uRm371psf8lACw0BhnHAgSnWhdBsV3iQ4nwftMinVWk6K5W_ircynVwC5ndfW1SDhH0TxVvGmAtrK4bzXd-nbjpgJ_RLVKaTDRdjaSGWP-GXk4uhkbbe_4xY5qsBCJ-PWxvO8jotDN4KZNLG_pPrxM39Tg1HhgrULMDMcbd&amp;v=2">
   </picture>
 </a>
 
