@@ -1,0 +1,19 @@
+name: 依赖变更审查
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  review:
+    name: 审查新增依赖
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+      - name: 检查依赖风险
+        uses: actions/dependency-review-action@v4
+        with:
+          fail-on-severity: moderate

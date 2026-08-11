@@ -1,0 +1,64 @@
+name: docweave
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: infra/docker/backend.Dockerfile
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      DOCWEAVE_DATA_DIR: /app/data
+    volumes:
+      - "${DOCWEAVE_DATA_DIR:-./data}:/app/data"
+    expose:
+      - "8000"
+    restart: unless-stopped
+    healthcheck:
+      test:
+        - CMD
+        - python3
+        - -c
+        - "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/api/v1/health', timeout=3)"
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+    networks:
+      - docweave
+
+  frontend:
+    build:
+      context: .
+      dockerfile: infra/docker/frontend.Dockerfile
+    depends_on:
+      backend:
+        condition: service_healthy
+    ports:
+      - "${DOCWEAVE_BIND_ADDRESS:-127.0.0.1}:${DOCWEAVE_HTTP_PORT:-18080}:80"
+    restart: unless-stopped
+    healthcheck:
+      test:
+        - CMD-SHELL
+        - "wget -q -O - http://127.0.0.1/healthz | grep -q '^ok$'"
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 5s
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+    networks:
+      - docweave
+
+networks:
+  docweave:
+    name: docweave-network

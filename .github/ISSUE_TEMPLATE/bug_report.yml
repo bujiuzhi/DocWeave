@@ -1,0 +1,41 @@
+name: 缺陷报告
+description: 报告可复现的功能缺陷；安全问题请使用私密报告渠道
+title: "[Bug] "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: 请先确认内容不包含 API Key、真实文档、个人信息或生产日志。
+  - type: input
+    id: version
+    attributes:
+      label: 版本
+      description: 提交哈希、发布版本或镜像标签
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: 环境
+      description: 操作系统、Python、Node.js、浏览器及部署方式
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期望结果
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: 实际结果
+      description: 仅附经过脱敏的错误信息或最小测试文件
+    validations:
+      required: true

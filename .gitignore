@@ -1,0 +1,27 @@
+# 前端构建与缓存
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+.pnpm-store/
+
+# Python 缓存与虚拟环境
+backend/.venv/
+backend/__pycache__/
+backend/**/*.pyc
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# 运行数据、上传文件与敏感配置
+data/
+tmp/
+output/
+.playwright-cli/
+.env
+.env.*
+!.env.example
+
+# 系统文件
+.DS_Store

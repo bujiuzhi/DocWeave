@@ -1,0 +1,53 @@
+name: 持续集成
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  backend:
+    name: 后端测试与审计
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+      - name: 配置 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: backend/requirements-dev.txt
+      - name: 安装依赖
+        run: python3 -m pip install -r backend/requirements-dev.txt
+      - name: 运行测试
+        run: python3 -m pytest -q
+      - name: 审计运行依赖
+        run: python3 -m pip_audit -r backend/requirements.txt
+      - name: 扫描 Python 安全问题
+        run: python3 -m bandit -r backend/app
+
+  frontend:
+    name: 前端构建与审计
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+      - name: 配置 pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 11.16.0
+      - name: 配置 Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: pnpm
+          cache-dependency-path: frontend/pnpm-lock.yaml
+      - name: 安装依赖
+        run: pnpm --dir frontend install --frozen-lockfile
+      - name: 构建前端
+        run: pnpm --dir frontend build
+      - name: 审计生产依赖
+        run: pnpm --dir frontend audit --prod --audit-level high
