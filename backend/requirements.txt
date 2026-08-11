@@ -6,4 +6,4 @@ python-multipart==0.0.32
 reportlab==5.0.0
 pdfplumber==0.11.10
 pypdf==6.15.0
-pymupdf==1.26.7
+pymupdf==1.28.2
