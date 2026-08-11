@@ -15,7 +15,7 @@ jobs:
       - name: 检出代码
         uses: actions/checkout@v4
       - name: 配置 Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v7
         with:
           python-version: "3.12"
           cache: pip
