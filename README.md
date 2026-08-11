@@ -271,6 +271,14 @@ DocWeave 采用 [GNU Affero General Public License v3.0](LICENSE)（`AGPL-3.0-on
 
 第三方组件仍分别遵循其自身许可证，详见[第三方依赖说明](THIRD_PARTY_NOTICES.md)。
 
+## Contributors
+
+感谢所有参与 DocWeave 的贡献者：
+
+<a href="https://github.com/bujiuzhi/DocWeave/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=bujiuzhi/DocWeave" alt="DocWeave Contributors">
+</a>
+
 ## Star History
 
 <a href="https://www.star-history.com/?repos=bujiuzhi%2FDocWeave&type=date&legend=top-left">
