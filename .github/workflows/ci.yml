@@ -36,7 +36,7 @@ jobs:
       - name: 检出代码
         uses: actions/checkout@v4
       - name: 配置 pnpm
-        uses: pnpm/action-setup@v4
+        uses: pnpm/action-setup@v6
         with:
           version: 11.16.0
       - name: 配置 Node.js
