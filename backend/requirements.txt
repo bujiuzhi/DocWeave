@@ -1,6 +1,6 @@
 fastapi==0.141.1
 starlette==1.6.0
-uvicorn[standard]==0.39.0
+uvicorn[standard]==0.52.3
 httpx==0.28.1
 python-multipart==0.0.32
 reportlab==5.0.0
