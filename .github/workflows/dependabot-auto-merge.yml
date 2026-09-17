@@ -1,0 +1,29 @@
+name: Dependabot 补丁更新自动合并
+
+on:
+  pull_request:
+    types: [opened, reopened, synchronize]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  enable-auto-merge:
+    name: 为补丁更新启用自动合并
+    if: >-
+      github.event.pull_request.user.login == 'dependabot[bot]' &&
+      github.event.pull_request.base.ref == 'main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: 读取 Dependabot 更新元数据
+        id: metadata
+        uses: dependabot/fetch-metadata@d7267f607e9d3fb96fc2fbe83e0af444713e90b7
+        with:
+          github-token: "${{ secrets.GITHUB_TOKEN }}"
+      - name: 为补丁更新启用 squash 自动合并
+        if: steps.metadata.outputs.update-type == 'version-update:semver-patch'
+        run: gh pr merge --auto --squash "$PR_URL"
+        env:
+          GH_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+          PR_URL: "${{ github.event.pull_request.html_url }}"
